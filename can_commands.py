@@ -72,6 +72,7 @@ def turn_growlight_off():
     send_can_message(0x07)
     log_command("turn_off_growlight")
 
+# TODO Add duration for the water cycle (Has to be implemented on arduino aswell) - Should send a message with data for how many seconds water should be turned on
 def turn_on_pump_and_valve():
     send_can_message(0x08)
     log_command("turn_on_pump_and_valve")

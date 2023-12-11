@@ -1,0 +1,234 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+2023-12-11 09:39:08.914 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 534, in _run_script
+    exec(code, module.__dict__)
+  File "/home/gijs/Chilibot/dashboard.py", line 59, in <module>
+    pump_valve_page.app()  # Calling the app function from pump_valve_page
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/pages/pump_valve_page.py", line 22, in app
+    st.success(f"Pump and valve scheduled to start everyday at {start_time_str}, {pump_repeat_count} times with {pump_duration} seconds duration")
+                                                                                                                 ^^^^^^^^^^^^^
+NameError: name 'pump_duration' is not defined
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+2023-12-11 09:40:03.386 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 534, in _run_script
+    exec(code, module.__dict__)
+  File "/home/gijs/Chilibot/dashboard.py", line 59, in <module>
+    pump_valve_page.app()  # Calling the app function from pump_valve_page
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/pages/pump_valve_page.py", line 32, in app
+    st.write(f"Pump and valve scheduled to start at {pump_start_time.strftime('%H:%M')}, {pump_repeat_count} times with {pump_duration} seconds duration")
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'strftime'
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+2023-12-11 09:40:46.925 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 534, in _run_script
+    exec(code, module.__dict__)
+  File "/home/gijs/Chilibot/dashboard.py", line 59, in <module>
+    pump_valve_page.app()  # Calling the app function from pump_valve_page
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/pages/pump_valve_page.py", line 32, in app
+    st.write(f"Pump and valve scheduled to start at {pump_start_time.strftime('%H:%M')}, {pump_repeat_count} times")
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'strftime'
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+SocketcanBus was not properly shut down
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to False.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.178.173:8501
+  External URL: http://62.195.11.72:8501
+
+
+  A new version of Streamlit is available.
+
+  See what's new at https://discuss.streamlit.io/c/announcements
+
+  Enter the following command to upgrade:
+  $ pip install streamlit --upgrade
+
+2023-12-11 12:44:49.758 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2262, in execute
+    cur.execute(sql, *args)
+sqlite3.OperationalError: no such table: your_table_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 534, in _run_script
+    exec(code, module.__dict__)
+  File "/home/gijs/Chilibot/dashboard.py", line 150, in <module>
+    data = load_data()
+           ^^^^^^^^^^^
+  File "/home/gijs/Chilibot/dashboard.py", line 145, in load_data
+    df = pd.read_sql(query, conn)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 654, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2326, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2274, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    SELECT
+        timestamp,  -- assuming you have a timestamp column
+        soil_moisture,
+        air_temperature,
+        air_humidity
+    FROM
+        your_table_name  -- replace with your table name
+    ORDER BY
+        timestamp
+    ': no such table: your_table_name
+2023-12-11 12:47:20.498 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2262, in execute
+    cur.execute(sql, *args)
+sqlite3.OperationalError: no such table: your_table_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 534, in _run_script
+    exec(code, module.__dict__)
+  File "/home/gijs/Chilibot/dashboard.py", line 149, in <module>
+    data = load_data()
+           ^^^^^^^^^^^
+  File "/home/gijs/Chilibot/dashboard.py", line 144, in load_data
+    df = pd.read_sql(query, conn)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 654, in read_sql
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2326, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gijs/Chilibot/env/lib/python3.11/site-packages/pandas/io/sql.py", line 2274, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+    SELECT
+        timestamp,  -- assuming you have a timestamp column
+        soil_moisture,
+        air_temperature,
+        air_humidity
+    FROM
+        your_table_name  -- replace with your table name
+    ORDER BY
+        timestamp
+    ': no such table: your_table_name

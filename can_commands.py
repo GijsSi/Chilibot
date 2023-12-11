@@ -6,17 +6,22 @@ from db import log_command
 # Set up the CAN bus
 bus = can.interface.Bus(channel='can0', bustype='socketcan')
 
+
+
 # Function to send a CAN message
 def send_can_message(command, data=0):
+    # message_data = struct.pack('B', command) + struct.pack('<f', data)
     message_data = struct.pack('B', command) + struct.pack('f', data)
     message = can.Message(arbitration_id=0x100, data=message_data, is_extended_id=False)
     bus.send(message)
+    # print(message)
 
 # Function to read CAN messages
 def read_can_message(expected_command):
     start_time = time.time()
     while time.time() - start_time < 5:  # Wait for 5 seconds max
         message = bus.recv(1)  # Timeout in seconds
+        
         if message is not None and message.arbitration_id == 0x100:
             command = message.data[0]
             if command == expected_command:
@@ -79,11 +84,12 @@ def turn_on_pump_and_valve():
 
 def move_motor_up(cm):
     log_command("move_motor_up")
-    send_can_message(0x09, float(cm))
-
+    send_can_message(0x0A, float(cm))
+    
 def move_motor_down(cm):
     log_command("turn_on_pump_and_valve")
-    send_can_message(0x0A, float(cm))
+    send_can_message(0x09, float(cm))
+
 
 
 

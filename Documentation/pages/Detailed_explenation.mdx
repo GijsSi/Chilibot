@@ -1,0 +1,47 @@
+# Project File Documentation
+
+## 1. `can_commands.py`
+- **Purpose:** Manages CAN bus communication for device interaction.
+- **Key Functions:** Sends CAN messages with specific commands and data.
+- **Integration:** Used by various modules for hardware control.
+
+## 2. `chilibot.sqlite`
+- **Purpose:** Stores sensor data and command logs.
+- **Tables:** `sensor_values` and `command_log`.
+- **Integration:** Accessed by scripts for data storage and retrieval.
+
+## 3. `dashboard.py`
+- **Purpose:** User interface for system monitoring and control.
+- **Integration:** Displays data from the database; may send control commands.
+
+## 4. `db.py`
+- **Purpose:** Handles database operations.
+- **Functionality:** Creates and manages the database schema.
+- **Integration:** Central to data storage and management.
+
+## 5. `main.py`
+- **Purpose:** Entry point of the application.
+- **Functionality:** Starts sensor scheduler and manages scheduled tasks.
+
+## 6. `pump_valve_scheduler.py`
+- **Purpose:** Schedules and controls pump and valve operations.
+- **Functionality:** Operates the pump and valve based on a set schedule.
+- **Integration:** Uses `can_commands` for hardware control; `schedule` for timing.
+
+## 7. `sensor_scheduler.py`
+- **Purpose:** Regularly schedules sensor readings.
+- **Functionality:** Reads various sensors and saves data to the database.
+- **Integration:** Relies on `can_commands` for sensor data and `db` for data storage.
+
+## 8. `grow_light_scheduler.py`
+- **Purpose:** Manages scheduling for grow lights.
+- **Functionality:** Turns grow lights on and off at specified times.
+- **Integration:** Utilizes `can_commands` for controlling grow lights; `schedule` for timing.
+
+### How They Work Together
+- Sensors and actuators are controlled via `can_commands.py`.
+- `chilibot.sqlite` serves as the central data repository.
+- `dashboard.py` provides a user interface for real-time monitoring and control.
+- `db.py` manages data storage and retrieval operations.
+- `main.py` orchestrates the operation of the entire system, including scheduling tasks.
+- Scheduling scripts (`pump_valve_scheduler.py`, `sensor_scheduler.py`, `grow_light_scheduler.py`) automate various system operations based on set schedules.

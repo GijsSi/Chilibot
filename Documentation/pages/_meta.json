@@ -1,11 +1,5 @@
 {
-  "index": "Introduction",
-  "Getting_started": "Getting Started",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+
   "contact": {
     "title": "Contact ↗",
     "type": "page",

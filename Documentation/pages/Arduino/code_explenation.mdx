@@ -1,0 +1,52 @@
+# 📝 Arduino Code Documentation for Chilibot 🌱
+
+## Overview
+This documentation explains the functionality and structure of the Arduino code used in the Chilibot project. It details various components of the code, such as sensor integration, relay control, and CAN bus communication.
+
+### 🚀 Getting Started
+Ensure you have all the necessary libraries installed before uploading the code to your Arduino board. The code includes libraries for relay control, CAN bus communication, I2C communication, and stepper motor control.
+
+## 🛠️ Code Structure
+
+### Initialization
+- Libraries for relay, I2C, stepper motor, and CAN bus are included.
+- Pin assignments are made for CAN module, relays, ultrasonic sensor, I2C sensor, and stepper motor.
+- Global variables and structures are declared for sensor data and CAN messages.
+
+### Setup Function
+- Initializes serial communication.
+- Sets up CAN bus, relays, ultrasonic sensor, I2C communication, and stepper motor.
+- Resets and configures the soil moisture sensor.
+
+### Main Loop
+- Reads CAN messages and executes commands based on the received data.
+- Functionality for reading sensor data and controlling relays and stepper motor is encapsulated within specific functions.
+
+### Relay Control Functions
+- `turn_pump_sol_on()`: Activates the water pump and solenoid valve.
+- `turnGrowLightOn()`: Turns on the grow light.
+- `turnGrowLightOff()`: Turns off the grow light.
+
+### Sensor Reading Functions
+- `getAverageDistance()`: Calculates the average distance using the ultrasonic sensor.
+- `getSoilMoistureHumidity()`: Reads soil moisture level from the soil moisture sensor.
+- `readAirTemperatureAndHumidity()`: Reads air temperature and humidity from the air sensor.
+
+### CAN Bus Communication
+- `sendCANMessage()`: Sends a CAN message with specified command and data.
+- `readCANMessages()`: Reads incoming CAN messages and executes corresponding actions.
+
+### Stepper Motor Control
+- `moveUp()`, `moveDown()`: Controls the stepper motor to move up or down by a specified distance.
+- `moveToPosition()`: Moves the stepper motor to a specific position based on distance measurements.
+
+### Utility Functions
+- Functions for reading and writing I2C data.
+- Helper functions for sensor data conversion and processing.
+
+## 📊 Data Handling
+- The code handles sensor data for soil moisture, air temperature, and humidity, and distance measurements.
+- Sensor data is processed and can be sent over the CAN bus or used to control relays and motors.
+
+## ⚙️ Customization
+- You can customize the code for different sensors, actuators, or CAN message structures as per your project requirements.

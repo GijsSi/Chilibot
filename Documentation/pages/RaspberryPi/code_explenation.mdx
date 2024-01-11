@@ -1,0 +1,49 @@
+# 🌱 Chilibot RaspberryPi Documentation 🤖
+
+## Overview
+This documentation provides a detailed overview of the Chilibot project's code structure and functionality. The project comprises several Python modules, each handling specific tasks in the automated gardening system.
+
+### 🗂️ File Structure
+
+1. **grow_light_scheduler.py** 🌟
+   - Manages the scheduling for the grow light.
+   - Contains functions to turn the light on and off based on predefined schedules.
+
+2. **pump_valve_scheduler.py** 💧
+   - Handles the scheduling for the water pump and solenoid valve.
+   - Includes functions to activate or deactivate the water systems at specific times.
+
+3. **sensor_scheduler.py** 🌡️
+   - Responsible for collecting and processing data from various sensors.
+   - Schedules periodic sensor readings and data logging.
+
+4. **can_commands.py** 🚌
+   - Contains definitions and functions for CAN bus communication.
+   - Facilitates sending and receiving CAN messages to/from various components.
+
+5. **dashboard.py** 📊
+   - Implements the main user interface for the system, this is the home page of the user interface.
+   - Displays real-time data, logs, and controls for the system.
+
+6. **db.py** 📚
+   - Manages database interactions.
+   - Stores, retrieves, and manages data like sensor readings and system states.
+
+7. **start.py** 🚀
+   - Main entry point for the application.
+   - Initializes and starts all services, schedulers, and the dashboard.
+
+### 🏁 Getting Started
+
+To get the system up and running: 
+1. activate the environment by running `source env/bin/activate`
+2. Ensure all dependencies are installed.
+3. Run `start.py` to initialize and start all components of the Chilibot system.
+4. Access the dashboard located at http://192.168.2.5:8501/` to monitor and control the system.
+
+### 🛠️ Customization and Expansion
+
+- Modify the scheduler files (`grow_light_scheduler.py`, `pump_valve_scheduler.py`, `sensor_scheduler.py`) to change the timing and logic of operations.
+- Update `can_commands.py` for changes in CAN communication protocols or message formats.
+- Enhance `dashboard.py` to add more features to the user interface.
+- Adjust `db.py` for any changes in data storage requirements or database schema.

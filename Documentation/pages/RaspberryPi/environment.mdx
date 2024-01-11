@@ -1,0 +1,78 @@
+# 🚀 Setting up the RaspberrPi Environment for Chilibot 🌶️
+
+## Overview
+This README guides you through setting up the Chilibot environment on a Raspberry Pi running Ubuntu. Ensure you're using Ubuntu and not Debian for compatibility.
+
+### SSH into Your Raspberry Pi
+First, securely log into your Raspberry Pi using SSH:
+```bash
+ssh [your_username]@[your_raspberrypi_ip_address]
+```
+
+### Clone the Repository
+Clone the Chilibot repository from GitHub:
+```bash
+git clone https://github.com/GijsSi/Chilibot.git
+```
+
+## CAN Connection
+Setup and configure CAN connection on your Raspberry Pi.
+
+### 🛠️ Installing CAN Bus with MCP2515
+
+#### 1. Edit Config File
+Open the config file using nano editor:
+```bash
+sudo nano /boot/firmware/config.txt
+```
+
+#### 2. Add Lines to Config
+Add the following lines to the `config.txt`. Note: CAN bus interrupt is connected to pin 12.
+```ini
+dtoverlay=mcp2515-can0,oscillator=8000000,interrupt=12
+dtoverlay=spi-bcm2835
+```
+
+#### 3. Enable SPI
+Ensure the SPI line is uncommented in the `config.txt` file:
+```ini
+# Correct 👍
+dtparam=spi=on
+
+# Incorrect 👎
+# dtparam=spi=on
+```
+
+### 🔍 Locating the CAN Interface on RaspberryPi
+To find the CAN interface, use:
+```bash
+ip link show
+```
+
+### 📶 Activating CAN Bus Adapter
+To bring the CAN bus adapter to UP state:
+```bash
+sudo ip link set can0 up type can bitrate 500000
+```
+
+#### Auto-Start CAN Bus
+The CAN bus should start automatically using the script in:
+```bash
+/etc/systemd/system/can0-setup.service
+```
+
+#### Systemd Service Configuration
+Create a systemd service to handle the CAN interface setup:
+```ini
+[Unit]
+Description=Setup CAN Interface
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip link set can0 up type can bitrate 500000
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+```
